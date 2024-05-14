@@ -21,18 +21,38 @@ class mahasiswa {
                 nama = pnama;
                 setID();
             }
+
+            int mahasiswa::nim = 0;
+
+            void mahasiswa::setID()
+            {
+                id = ++nim;
+            }
+
+            void mahasiswa::printAll()
+            {
+                cout << "ID = " << id << endl;
+                cout << "Nama = " << nama << endl;
+                cout << endl;
+            }
 };
 
-int mahasiswa::nim = 0;
-
-void mahasiswa::setID()
+int main() 
 {
-    id = ++nim;
+    mahasiswa mhs1("Sru Dadi");
+    mahasiswa mhs2("Budi Jatmiko");
+
+    mahasiswa::setNim(237);
+    mahasiswa mhs4("Andi janu");
+    mahasiswa mhs5("Joko wahono");
+
+    mhs1.printAll();
+
+    mhs2.printAll();
+    mhs3.printAll();
+    mhs4.printAll();
+
+    cout << "Akses dari luar object = " << mahasiswa::getNim() << endl;
+    return 0;
 }
 
-void mahasiswa::printAll()
-{
-    cout << "ID = " << id << endl;
-    cout << "Nama = " << nama << endl;
-    cout << endl;
-}
