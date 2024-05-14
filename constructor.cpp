@@ -20,4 +20,15 @@ class Mahasiswa
         {
             nim = iNim;
         }
+
+        Mahasiswa(string iNama)
+        {
+            nama = iNama;
+        };
+
+        Mahasiswa(int iNim, string iNama)
+        {
+            nim = iNim;
+            nama = iNama;
+        };
 };
